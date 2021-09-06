@@ -11,20 +11,22 @@ import seaborn as sns
 
 
 
-consumerKey='O9h0Wptu1FOT6dndo0lfS1RqG'
-consumerSecret='fM5MLtuOrgoy2WqaiHh9lU4jJCjmlVFBGXoBMMiQasZGBa5X5S'
-accessToken='1409953639121133571-JwiEnR09QqJxb2B9tWHsp0y8Lvjh2m'
-accesstokenSecret='urVb7E2UuPeKmvyiX4BogPdjYTwF2G02QYN5Vxown1iXp'
+consumer_key='O9h0Wptu1FOT6dndo0lfS1RqG'
+consumer_secret='fM5MLtuOrgoy2WqaiHh9lU4jJCjmlVFBGXoBMMiQasZGBa5X5S'
+access_token='1409953639121133571-JwiEnR09QqJxb2B9tWHsp0y8Lvjh2m'
+access_token_secret='urVb7E2UuPeKmvyiX4BogPdjYTwF2G02QYN5Vxown1iXp'
 
 
-#Create the authentication object
-authenticate = tweepy.OAuthHandler(consumerKey, consumerSecret) 
-    
-# Set the access token and access token secret
-authenticate.set_access_token(accessToken, accessTokenSecret) 
-    
+try:
+#Creating the authentication object
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+#Setting your access token and secret
+    auth.set_access_token(access_token, access_token_secret)
 # Creating the API object while passing in auth information
-api = tweepy.API(authenticate, wait_on_rate_limit = True)
+    api = tweepy.API(auth)
+
+except:
+    print("Error: Authentication Failed")
 
 
 
