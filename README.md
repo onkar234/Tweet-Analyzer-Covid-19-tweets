@@ -1,10 +1,10 @@
-# Tweet-Analyzer
+# Covid-19 Tweet-Analyzer
 
 Web App Link : https://covid-19tweetanalyzer.herokuapp.com/
 
 This is a cool web app integrated with twitter which takes the twitter handel as as input and does :
 
-1.Analyze the tweets of your favourite Personalities
+1. Analyze the civid-19 tweets
 
 This tool performs the following tasks :
 1. Fetches the 5 most recent tweets from the given twitter handel
